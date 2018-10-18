@@ -20,9 +20,9 @@ class ReasonTableViewController: UITableViewController {
         fetchPost()
     }
     
-
+    
     func fetchPost() {
-        PostController.sharedInstance.posts { (success) in
+        PostController.sharedInstance.fetchPost { (success) in
             
             if success{
                 DispatchQueue.main.async {
@@ -45,7 +45,7 @@ class ReasonTableViewController: UITableViewController {
     
     
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
-        PostController.fetchPost { (success) in
+        PostController.sharedInstance.fetchPost { (success) in
             if success {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -67,7 +67,7 @@ class ReasonTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reasonCell", for: indexPath)
         
         let post = PostController.sharedInstance.posts[indexPath.row]
         
@@ -107,7 +107,7 @@ extension ReasonTableViewController {
             PostController.sharedInstance.postReason(with: name, name: reason, completion: { (success) in
                 if success {
                     DispatchQueue.main.async {
-                        //                        self.title = "there was an error with your request"
+                        //self.title = "there was an error with your request"
                         self.tableView.reloadData()
                     }
                 }

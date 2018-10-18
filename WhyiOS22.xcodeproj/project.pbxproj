@@ -69,8 +69,8 @@
 		190B23B321782DF40071321C /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				190B23AA21782C980071321C /* LaunchScreen.storyboard */,
 				190B23A521782C970071321C /* Main.storyboard */,
+				190B23AA21782C980071321C /* LaunchScreen.storyboard */,
 				190B23B721782FA90071321C /* MODEL */,
 				190B23C0217839A20071321C /* ModelController */,
 				190B23C1217839AD0071321C /* ViewController */,
@@ -336,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57CQ48CJGQ;
-				INFOPLIST_FILE = WhyiOS22/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WhyiOS22/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57CQ48CJGQ;
-				INFOPLIST_FILE = WhyiOS22/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WhyiOS22/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

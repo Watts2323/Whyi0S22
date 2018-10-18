@@ -16,7 +16,7 @@ class PostController: Codable {
     //Source of truth
     var posts: [Post] = []
     
-    static let baseURL = URL(string: "https://whydidyouchooseios.firebaseio.com/reasons")
+    let baseURL = URL(string: "https://whydidyouchooseios.firebaseio.com/reasons")
     
     enum HTTPMethod: String {
         case put = "PUT"
@@ -27,7 +27,7 @@ class PostController: Codable {
     
     
     //CREATE
-    static func postReason(with reason: String, name: String, completion: @escaping (Bool) -> Void) {
+     func postReason(with reason: String, name: String, completion: @escaping (Bool) -> Void) {
         let post = Post(name: name, reason: reason)
         // 1) URLSession
         // 2) define the request and build your url from a property coming from your instance of Chat
@@ -59,7 +59,7 @@ class PostController: Codable {
         }
     }
     
-    static func fetchPost(completion: @escaping (Bool) -> Void) {
+     func fetchPost(completion: @escaping (Bool) -> Void) {
         guard let url = baseURL else {
             fatalError("Bad baseURL")
         }
