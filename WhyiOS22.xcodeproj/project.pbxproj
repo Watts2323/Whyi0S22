@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		190B23A221782C970071321C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B23A121782C970071321C /* AppDelegate.swift */; };
-		190B23A421782C970071321C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B23A321782C970071321C /* ViewController.swift */; };
 		190B23A721782C970071321C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190B23A521782C970071321C /* Main.storyboard */; };
 		190B23A921782C980071321C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190B23A821782C980071321C /* Assets.xcassets */; };
 		190B23AC21782C980071321C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190B23AA21782C980071321C /* LaunchScreen.storyboard */; };
+		190B23B621782F640071321C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B23B521782F640071321C /* Post.swift */; };
+		190B23B921782FB50071321C /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B23B821782FB50071321C /* PostController.swift */; };
+		190B23BD217839370071321C /* ReasonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B23BC217839370071321C /* ReasonTableViewController.swift */; };
+		190B23BF2178399E0071321C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B23BE2178399E0071321C /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190B239E21782C970071321C /* WhyiOS22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhyiOS22.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		190B23A121782C970071321C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		190B23A321782C970071321C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		190B23A621782C970071321C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		190B23A821782C980071321C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		190B23AB21782C980071321C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		190B23AD21782C980071321C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		190B23B521782F640071321C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		190B23B821782FB50071321C /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		190B23BC217839370071321C /* ReasonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonTableViewController.swift; sourceTree = "<group>"; };
+		190B23BE2178399E0071321C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		190B23A021782C970071321C /* WhyiOS22 */ = {
 			isa = PBXGroup;
 			children = (
-				190B23A121782C970071321C /* AppDelegate.swift */,
-				190B23A321782C970071321C /* ViewController.swift */,
-				190B23A521782C970071321C /* Main.storyboard */,
-				190B23A821782C980071321C /* Assets.xcassets */,
-				190B23AA21782C980071321C /* LaunchScreen.storyboard */,
-				190B23AD21782C980071321C /* Info.plist */,
+				190B23B321782DF40071321C /* Storyboard */,
+				190B23B421782E000071321C /* Resources */,
 			);
 			path = WhyiOS22;
+			sourceTree = "<group>";
+		};
+		190B23B321782DF40071321C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				190B23AA21782C980071321C /* LaunchScreen.storyboard */,
+				190B23A521782C970071321C /* Main.storyboard */,
+				190B23B721782FA90071321C /* MODEL */,
+				190B23C0217839A20071321C /* ModelController */,
+				190B23C1217839AD0071321C /* ViewController */,
+				190B23BE2178399E0071321C /* PostTableViewCell.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		190B23B421782E000071321C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				190B23A121782C970071321C /* AppDelegate.swift */,
+				190B23A821782C980071321C /* Assets.xcassets */,
+				190B23AD21782C980071321C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		190B23B721782FA90071321C /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				190B23B521782F640071321C /* Post.swift */,
+			);
+			path = MODEL;
+			sourceTree = "<group>";
+		};
+		190B23C0217839A20071321C /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				190B23B821782FB50071321C /* PostController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		190B23C1217839AD0071321C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				190B23BC217839370071321C /* ReasonTableViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190B23A421782C970071321C /* ViewController.swift in Sources */,
 				190B23A221782C970071321C /* AppDelegate.swift in Sources */,
+				190B23BD217839370071321C /* ReasonTableViewController.swift in Sources */,
+				190B23BF2178399E0071321C /* PostTableViewCell.swift in Sources */,
+				190B23B621782F640071321C /* Post.swift in Sources */,
+				190B23B921782FB50071321C /* PostController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
